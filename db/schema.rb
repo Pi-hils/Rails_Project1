@@ -30,9 +30,13 @@ ActiveRecord::Schema.define(version: 2020_08_27_202105) do
   end
 
   create_table "posts", force: :cascade do |t|
+    t.string "title"
+    t.boolean "active"
+    t.integer "user_id"
     t.text "text"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
