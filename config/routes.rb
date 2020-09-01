@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   get 'public/homepage'
 
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
 
   # get "/dashboard" => 'users#index'
 
