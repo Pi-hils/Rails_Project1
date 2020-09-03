@@ -1,22 +1,44 @@
-<h1>Feeds</h1>
-<%= link_to 'New post', new_post_path %>
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-    <th></th>
-  </tr>
+<style>
+  body {
+    background-image: url('https://user-images.githubusercontent.com/57604942/92002761-20a72d80-ed38-11ea-84bf-a9b961ca6bfa.jpg');
+  }
+</style>
+
+<br>
+<br>
+
+<%# <ul class='list-group'> %>
+<% @posts.each do |post| %>
+  <div class="list-group-item list-group-item-action flex-column align-items-start">
+    <%# <div class="d-flex w-100 justify-content-between"><br> %>
+      <h5 class="mb-1"> Hilda </h5>
+      <small class="text-muted"><%= post.created_at.to_s(:short)%><br></small>
+      <br>
+        <strong><%= post.text%></td></strong><br>
+      <small class="text-muted"><%= link_to 'Comment', post_path(post) %>
+      <%= link_to 'Edit', edit_post_path(post) %>
+      <%= link_to 'Destroy', post_path(post),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+     </small>
+</div><br><br>
+ <% end %>
+  <%# likes end %>
+
+
+<div class='indexlink'>
+  <p><%= link_to 'Create New Post', new_post_path %></p>
+</div>
+
+
+
+
+    <%# <th>Caption:</th>
+    <th>Text</th> %>
+    <%# <th></th> %>
+  <%# </tr> %>
  
 
-  <% @posts.each do |post| %>
-    <tr>
-      <td><%= post.title %></td>
-      <td><%= post.text %></td>
-      <td><%= link_to 'Show', post_path(post) %></td>
-      <td><%= link_to 'Edit', edit_post_path(post) %></td>
-      <td><%= link_to 'Destroy', post_path(post),
-              method: :delete,
-              data: { confirm: 'Are you sure you want to DELETE?'} %></td>
-    </tr>
-  <% end %>
-</table
+    <%# <tr> %>
+     
+  
