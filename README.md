@@ -32,9 +32,14 @@ Things you may want to cover:
       t.timestamps
 ```
 3. Run rails db:migrate
-4. In model/post --> add 'has_many :likes' + d
-ef total_likes
+4. In model/post --> add 'has_many :likes' + 
+def total_likes
  0 
  end
  5. Create in model a file called Likes
- 
+ 6. Likes Controller
+ 7. Routes
+ 7. Post/index
+ 8. some css- post actionn
+ 9. JS/packs/posts.js
+ 8. views/posts/likes.js

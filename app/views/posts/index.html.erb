@@ -23,10 +23,11 @@
      </small>
   <div class="post-details">
     <div class='post-actions'>
-      <i class='fa fa-heart like-<%= post.id %> fa-2x  post-like' data-id="<%= post.id %>"></i>
+      <i class="fa fa-heart like-<%= post.id %> <%= 'active' if post_liked_by_user?(post.id) %> fa-2x  post-like" data-id="<%= post.id %>"></i>
     </div>
   </div>
 
+<p><strong><%= post.total_likes_count %>Likes</strong></p>
 </div><br><br>
  <% end %>
   <%# likes end %>

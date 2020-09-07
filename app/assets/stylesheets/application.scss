@@ -12,6 +12,10 @@
   margin-left: 10px;
 }
 
+.hi ul{
+  color:green;
+}
+
 .post-actions{
   margin-bottom: 20px;
   i {
@@ -24,8 +28,6 @@
   }
 
   i:hover{
-    color:green;
+    color:red;
   }
-
-
 }
